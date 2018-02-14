@@ -1,9 +1,7 @@
 #ifndef _ISOTP_H
 #define _ISOTP_H
 
-#include <mcp_can.h>
-
-//#define ISO_TP_DEBUG
+#include "can_helper.h"
 
 typedef enum {
   ISOTP_IDLE = 0,
@@ -56,12 +54,12 @@ struct Message_t
 class IsoTp
 {
 	public:
-		IsoTp(MCP_CAN* bus, uint8_t mcp_int);
+		IsoTp(CanIf* bus, uint8_t mcp_int);
 		uint8_t send(Message_t* msg);
 		uint8_t receive(Message_t* msg);
 		void    print_buffer(uint32_t id, uint8_t *buffer, uint16_t len);
 	private:
-		MCP_CAN* _bus;
+		CanIf* _bus;
                 uint8_t  _mcp_int;
 		uint32_t rxId;
 		uint8_t  rxLen;

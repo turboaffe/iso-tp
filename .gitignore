@@ -2,6 +2,12 @@
 Thumbs.db
 ehthumbs.db
 
+#build dir
+build
+
+#swp files vim
+*.swp
+
 # Folder config file
 Desktop.ini
 
