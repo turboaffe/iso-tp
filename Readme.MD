@@ -1,8 +1,4 @@
-ISO 15765-2 ISO-TP protocol implementation for Arduino
-
-This implementation requires MCP_CAN_lib from
-
-https://github.com/coryjfowler/MCP_CAN_lib with debug output disabled.
+ISO 15765-2 ISO-TP protocol implementation 
 
 Currently implemented:
 
@@ -20,4 +16,3 @@ Currently implemented:
 * some error handling
 * simple frame padding with 0x00
 
-See usage example in example/send_receive/send_receive.ino
